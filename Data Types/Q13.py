@@ -2,12 +2,15 @@
 # as input and prints the unique words in sorted form (alphanumerically).
 
 
-string = input("enter comma separated sequence of words: ").split(",")
-string = sorted(string)
-print("Sorted: " + ','.join(string))
+sample = input("Enter a comma separated word sequence: ")
+new_list = []
+word_list = sample.split(',')
+for word in word_list:
+    if word not in new_list:
+        new_list.append(word)
+new_list.sort()
+print(new_list)
 
 
-# my_string = input("enter words here: ")
-# result = [x.strip() for x in my_string.split(',')]
-# print ("Sorted: " + ','.join(sorted(result)))
+
 
